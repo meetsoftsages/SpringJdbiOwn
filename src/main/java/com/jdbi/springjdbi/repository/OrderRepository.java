@@ -17,8 +17,8 @@ public class OrderRepository implements OrderRepoInterface {
 
     public List<Order> getAllOrder() {
         return jdbi.withHandle(handle ->
-                handle.createQuery("select * from order ")
-                .mapTo(Order.class)
+                handle.createQuery("select * from \"order\" ")
+                .map(new OrderMapper())
                 .list());
     }
 //    List<Order> getOrderById = jdbi.withHandle(handle -> {
