@@ -1,19 +1,27 @@
 package com.jdbi.springjdbi.domain;
 
 public class Order {
-    private int id;
+    private static int id;
     private String order_name;
-    private int quantity;
-    private int amount;
 
-    public Order(int id, String order_name, int quantity, int amount) {
+    public Order(int id, String order_name) {
         this.id = id;
         this.order_name = order_name;
-        this.quantity = quantity;
-        this.amount = amount;
+    }
+//    private int quantity;
+//    private int amount;
+
+//    public Order(int id, String order_name, int quantity, int amount) {
+//        this.id = id;
+//        this.order_name = order_name;
+//        this.quantity = quantity;
+//        this.amount = amount;
+
+
+    public Order() {
     }
 
-    public int getId() {
+    public static int getId() {
         return id;
     }
 
@@ -29,19 +37,19 @@ public class Order {
         this.order_name = order_name;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
+//    public int getQuantity() {
+//        return quantity;
+//    }
+//
+//    public void setQuantity(int quantity) {
+//        this.quantity = quantity;
+//    }
+//
+//    public int getAmount() {
+//        return amount;
+//    }
+//
+//    public void setAmount(int amount) {
+//        this.amount = amount;
+//    }
 }
