@@ -24,4 +24,24 @@ public class OrderController {
     public List<Order> getAllOrder(){
         return orderService.getAllOrders();
     }
+
+    @GetMapping("/id")
+    public List<Order> getById(){
+        return orderService.getById();
+    }
+
+    @GetMapping("/create")
+    public String creatOrder(){
+       return orderService.createOrder();
+    }
+
+    @GetMapping("/delete")
+    public String deleteOrder(){
+        return orderService.deleteOrder();
+    }
+
+    @GetMapping("/update")
+    public String updateOrder(){
+        return orderService.updateOrder();
+    }
 }

@@ -17,7 +17,23 @@ public class OrderService {
     }
 
 
-    public List<Order> getAllOrders(){
+    public List<Order> getAllOrders() {
         return orderRepository.getAllOrder();
     }
+
+    public List<Order> getById() {
+        return orderRepository.getById();
+    }
+
+    public String createOrder(){
+        return orderRepository.createOrder();
+    }
+
+    public String deleteOrder(){
+        return orderRepository.deleteOrder();
+    }
+    public String updateOrder(){
+        return orderRepository.updateOrder();
+    }
 }
+
