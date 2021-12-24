@@ -1,6 +1,5 @@
 package com.jdbi.springjdbi.repository;
 
-
 import com.jdbi.springjdbi.domain.Order;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;

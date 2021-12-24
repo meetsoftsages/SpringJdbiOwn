@@ -1,11 +1,8 @@
 package com.jdbi.springjdbi.service;
 
-
 import com.jdbi.springjdbi.domain.Order;
 import com.jdbi.springjdbi.repository.OrderRepository;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -16,7 +13,6 @@ public class OrderService {
         this.orderRepository = orderRepository;
     }
 
-
     public List<Order> getAllOrders() {
         return orderRepository.getAllOrder();
     }
@@ -25,14 +21,15 @@ public class OrderService {
         return orderRepository.getById();
     }
 
-    public String createOrder(){
+    public String createOrder() {
         return orderRepository.createOrder();
     }
 
-    public String deleteOrder(){
+    public String deleteOrder() {
         return orderRepository.deleteOrder();
     }
-    public String updateOrder(){
+
+    public String updateOrder() {
         return orderRepository.updateOrder();
     }
 }

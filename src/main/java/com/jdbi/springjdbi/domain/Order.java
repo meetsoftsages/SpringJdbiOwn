@@ -1,11 +1,5 @@
 package com.jdbi.springjdbi.domain;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-
-import java.util.List;
-
 public class Order {
     private int id;
     private String order_name;
@@ -16,15 +10,6 @@ public class Order {
         this.order_name = order_name;
         this.quantity=quantity;
     }
-//    private int quantity;
-//    private int amount;
-
-//    public Order(int id, String order_name, int quantity, int amount) {
-//        this.id = id;
-//        this.order_name = order_name;
-//        this.quantity = quantity;
-//        this.amount = amount;
-
 
     public Order() {
     }
@@ -52,19 +37,4 @@ public class Order {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-//    public int getQuantity() {
-//        return quantity;
-//    }
-//
-//    public void setQuantity(int quantity) {
-//        this.quantity = quantity;
-//    }
-//
-//    public int getAmount() {
-//        return amount;
-//    }
-//
-//    public void setAmount(int amount) {
-//        this.amount = amount;
-//    }
 }
