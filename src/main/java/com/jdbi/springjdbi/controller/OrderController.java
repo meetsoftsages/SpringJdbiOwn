@@ -2,12 +2,10 @@ package com.jdbi.springjdbi.controller;
 
 import com.jdbi.springjdbi.domain.Order;
 import com.jdbi.springjdbi.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/order")
@@ -25,23 +23,23 @@ public class OrderController {
         return orderService.getAllOrders();
     }
 
-    @GetMapping("/id")
-    public List<Order> getById(){
-        return orderService.getById();
+    @GetMapping("{id}")
+    public Order getById(@PathVariable("id") int id){
+        return orderService.getById(id);
     }
 
-    @GetMapping("/create")
-    public String creatOrder(){
-       return orderService.createOrder();
+    @PostMapping()
+    public String creatOrder(@RequestBody Order order){
+       return orderService.createOrder(order);
     }
 
-    @GetMapping("/delete")
-    public String deleteOrder(){
-        return orderService.deleteOrder();
+    @DeleteMapping("{id}")
+    public String deleteOrder(@PathVariable("id")int id){
+        return orderService.deleteOrder(id);
     }
 
-    @GetMapping("/update")
-    public String updateOrder(){
-        return orderService.updateOrder();
+    @PutMapping("{id}")
+    public String updateOrder(@RequestBody Order order, @PathVariable("id")int id){
+        return orderService.updateOrder(order,id);
     }
 }
